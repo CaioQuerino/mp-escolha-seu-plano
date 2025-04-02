@@ -1,8 +1,7 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import icon_right from '../assets/right.svg';
 import icon_start from '../assets/start.svg';
 import Button from '../components/Button';
-import Header from '../components/Header';
 
 interface PlanoType {
     id: number;
