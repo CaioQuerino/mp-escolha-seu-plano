@@ -10,9 +10,9 @@ header
 
 .div-container-app
     @include mixins.center1($display: grid)
-    height: calc(100vh - 80px) // Ajusta a altura considerando o header
+    height: calc(100vh - 80px) 
     padding: 20px
-    margin-top: 80px // Empurra o conteúdo para baixo para não ficar sob o header
+    margin-top: 80px
 
     &-border
         border: 2px solid variables.$stroke
@@ -28,3 +28,5 @@ header
         border-radius: variables.$bd-radius
         padding: 40px
         border: 1px solid variables.$stroke
+        @include mixins.card-content-center
+      
