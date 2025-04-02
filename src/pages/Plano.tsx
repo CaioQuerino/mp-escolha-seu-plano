@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import icon_right from '../assets/right.svg';
 import icon_start from '../assets/start.svg';
 import Button from '../components/Button';
+import Header from '../components/Header';
 
 interface PlanoType {
     id: number;
@@ -53,33 +54,38 @@ const planos: Record<string, PlanoType> = {
 
 export default memo(function Plano() {
     return (
-        <div className='div-container-app'>
-            {Object.values(planos).map((plano) => {
-                const isGratis = plano.valor === 'Gratis';
+        <>
+            <article className='div-container-app'>
 
-                return (
-                    <div key={plano.id} className="div-container-app-border">
-                        <div className={`div-container-app-card card${plano.id}`}>
-                            <h1>{plano.plano}</h1>
-                            <h2>{plano.valor} <span>{plano.mensalidade || ''}</span></h2>
-                            <hr />
 
-                            <h3>{plano.obs[1]}</h3>
-                            
-                            <ul>
-                                {Object.values(plano.incluso || plano["tudo grátis"] || {}).map((item, index) => (
-                                    <li key={index}>{item}</li>
-                                ))}
-                            </ul>
-                            {isGratis ? (
-                                <Button value="CONTINUAR" img={icon_right} />
-                            ) : (
-                                <Button value="COMECE AGORA" img={icon_start} />
-                            )}
+                {Object.values(planos).map((plano) => {
+                    const isGratis = plano.valor === 'Gratis';
+
+                    return (
+                        <div key={plano.id} className="div-container-app-border">
+                            <div className={`div-container-app-card card${plano.id}`}>
+
+                                <h1>{plano.plano}</h1>
+                                <h2>{plano.valor} <span>{plano.mensalidade || ''}</span></h2>
+                                <hr />
+
+                                <h3>{plano.obs[1]}</h3>
+
+                                <ul>
+                                    {Object.values(plano.incluso || plano["tudo grátis"] || {}).map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
+                                </ul>
+                                {isGratis ? (
+                                    <Button value="CONTINUAR" img={icon_right} />
+                                ) : (
+                                    <Button value="COMECE AGORA" img={icon_start} />
+                                )}
+                            </div>
                         </div>
-                    </div>
-                );
-            })}
-        </div>
+                    );
+                })}
+            </article>
+        </>
     );
 });

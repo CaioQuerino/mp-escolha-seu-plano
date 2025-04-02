@@ -1,12 +1,13 @@
 import './App.css'
+import Header from './components/Header'
 import Plano from './pages/Plano'
 
 function App() {
 
   return (
-  <div>
+  <main>
       <Plano />
-  </div>
+  </main>
   )
 }
 
