@@ -1,0 +1,24 @@
+@use 'variables'
+    
+@mixin center1($display: grid)
+    display: $display
+    grid-template-columns: repeat(3, 33.33%)
+    justify-content: center
+    align-content: center
+
+    @media( max-width: 1325px  )
+        grid-template-columns: repeat(1, 100%)
+        row-gap: 27px
+        height: auto;
+
+@mixin center2($display: flex)
+    display: $display
+    justify-content: center
+    align-content: center
+    justify-self: center
+
+@mixin card-layout($font: 'Arial', $fontSZ: 1rem, $mg-btn: 6px, $color: #FFF)
+    font-family: $font
+    font-size: $fontSZ
+    margin-bottom: $mg-btn
+    color: $color

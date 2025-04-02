@@ -1,0 +1,33 @@
+@use 'variables'
+@use '../1-base/mixins'
+    
+
+h1
+    @include mixins.card-layout($font: variables.$IndieFlower,$fontSZ: 1.375rem, $mg-btn: 12px, $color: variables.$color-sub-text)
+    
+
+
+h2
+    @include mixins.card-layout($font: variables.$InriaSans ,$fontSZ: 2.825rem, $mg-btn: 12px, $color: variables.$color-text)
+
+
+h3
+    @include mixins.card-layout($font: variables.$InriaSans, $fontSZ: 1.375rem, $mg-btn: 12px, $color: variables.$color-text)
+
+
+
+ul
+    font-family: variables.$InriaSans
+    font-size: .625rem
+    margin-bottom: 12px
+
+    
+
+li::before
+    content: '✓'
+    color: variables.$bg-button
+
+
+body
+    background-color: variables.$bg-color
+    display: grid

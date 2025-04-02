@@ -1,0 +1,25 @@
+
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+.div-container-app
+    @include mixins.center1($display: grid)
+    height: 100vh
+    padding: 20px
+
+
+    &-border
+      border: 2px solid variables.$bg-menu
+      padding: 20px
+      @include mixins.center2($display: flex)
+      border-radius: variables.$bd-radius
+
+
+
+    &-card
+        width: 369px
+        height: 402px
+        background-color: variables.$bg-menu
+        color: #fff
+        border-radius: variables.$bd-radius
+        padding: 40px

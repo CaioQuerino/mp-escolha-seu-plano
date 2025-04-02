@@ -1,13 +1,12 @@
 import './App.css'
+import Plano from './pages/Plano'
 
 function App() {
 
   return (
-    <>
-      <div>
-        <p>Crie aqui seu projeto</p>
-       </div>
-    </>
+  <div>
+      <Plano />
+  </div>
   )
 }
 
