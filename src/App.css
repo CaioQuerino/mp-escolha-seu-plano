@@ -16,7 +16,7 @@ h1 {
 h2 {
   font-family: "Inria Sans", sans-serif;
   font-size: 2.825rem;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   color: #FCFEFD;
 }
 
@@ -31,16 +31,33 @@ ul {
   font-family: "Inria Sans", sans-serif;
   font-size: 0.625rem;
   margin-bottom: 12px;
+  display: grid;
+  row-gap: 10px;
+}
+span {
+  font-size: 1.375rem;
+  font-weight: 400;
 }
 
 li::before {
   content: "✓";
   color: #4800D7;
+  margin-right: 5px;
 }
 
 body {
   background-color: #000;
   display: grid;
+}
+
+hr {
+  margin: 0 0 12px 0;
+  border-color: #fff;
+  opacity: 20%;
+}
+
+button {
+  border: none;
 }
 
 .div-container-app {
@@ -70,10 +87,33 @@ body {
 .div-container-app-card {
   width: 369px;
   height: 402px;
-  background-color: rgba(136, 136, 136, 0.4);
+  background-color: #0c0c0c;
   color: #fff;
   border-radius: 16px;
   padding: 40px;
+  border: 1px solid rgba(136, 136, 136, 0.4);
+}
+
+button {
+  padding: 5px 12px 5px 14px;
+  display: flex;
+  grid-template-columns: repeat(3, 33.33%);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #4800D7;
+  border-radius: 3px;
+  margin-top: 12px;
+  height: 32px;
+  color: #FCFEFD;
+  gap: 9px;
+}
+@media (max-width: 1325px) {
+  button {
+    grid-template-columns: repeat(1, 100%);
+    row-gap: 27px;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

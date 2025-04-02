@@ -1,0 +1,14 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+button
+    padding: 5px 12px 5px 14px
+    @include mixins.center1($display: flex)
+    align-items: center
+    background-color: variables.$bg-button
+    border-radius: 3px
+    margin-top: 12px
+    height: 32px
+    color: variables.$color-text
+    gap: 9px
+    

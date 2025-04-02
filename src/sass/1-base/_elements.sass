@@ -8,7 +8,7 @@ h1
 
 
 h2
-    @include mixins.card-layout($font: variables.$InriaSans ,$fontSZ: 2.825rem, $mg-btn: 12px, $color: variables.$color-text)
+    @include mixins.card-layout($font: variables.$InriaSans ,$fontSZ: 2.825rem, $mg-btn: 24px, $color: variables.$color-text)
 
 
 h3
@@ -20,14 +20,33 @@ ul
     font-family: variables.$InriaSans
     font-size: .625rem
     margin-bottom: 12px
+    display: grid
+    row-gap: 10px
+    
 
+
+    li 
+
+span
+    font-size: 1.375rem
+    font-weight: 400
     
 
 li::before
     content: '✓'
     color: variables.$bg-button
+    margin-right: 5px
 
 
 body
     background-color: variables.$bg-color
     display: grid
+
+hr
+    margin: 0 0 12px 0
+    border-color:  #fff
+    opacity: 20%
+
+
+button
+    border: none
